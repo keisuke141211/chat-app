@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'messages/index'
   root to: "rooms#index"
   resources :users, only: [:edit,:update,:destory]
-  resources :rooms, only: [:new,:create] do
-    resources :messages, only: [:index,:create]
+  resources :rooms, only: [:new,:create,:destory] do
+    resources :messages, only: [:index,:create,]
   end
 end
